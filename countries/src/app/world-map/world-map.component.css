@@ -1,0 +1,42 @@
+/* flexbox styling for div containing two flex columns */
+
+.column-container {
+    display: flex;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* flexbox styling applied to flex box columns with equal column width */
+  .column {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #cecccc;
+    border-radius: 9px;
+    background-color: #f9f9f9;
+  }
+  
+  /* class applied to column for world map */
+  .map-column {
+    background-color: #b763db;
+  }
+  
+  /* class applied to column for country information */
+  .info-column {
+    background-color: #a28eea;
+  }
+  
+  /* Make it responsive for smaller screens, vertically stack columns */
+  /* TODO: change this based on final design? */
+  
+  @media (max-width: 760px) {
+    .column-container {
+      flex-direction: column;
+    }
+    
+    .column {
+      margin-bottom: 15px;
+    }
+  }
+  
