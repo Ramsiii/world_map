@@ -26,8 +26,17 @@
   .info-column {
     background-color: #a28eea;
   }
+
+  /* class applied to the object with map-image.svg */
+  .world-map {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+  }
   
-  /* Make it responsive for smaller screens, vertically stack columns */
+
+
+  /* Responsive design for smaller screens, vertically stacked columns */
   /* TODO: change this based on final design? */
   
   @media (max-width: 760px) {
@@ -39,4 +48,6 @@
       margin-bottom: 15px;
     }
   }
+
+
   
