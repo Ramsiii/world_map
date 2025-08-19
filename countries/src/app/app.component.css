@@ -1,0 +1,34 @@
+.column-container {
+  display: flex;
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #cecccc;
+  border-radius: 9px;
+  background-color: #f9f9f9;
+}
+
+.map-column {
+  background-color: #b763db;
+}
+
+.info-column {
+  background-color: #a28eea;
+}
+
+/* Make it responsive for smaller screens */
+@media (max-width: 760px) {
+  .column-container {
+    flex-direction: column;
+  }
+  
+  .column {
+    margin-bottom: 15px;
+  }
+}
