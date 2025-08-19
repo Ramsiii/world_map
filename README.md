@@ -1,4 +1,4 @@
-World Map Angular Project for WGU.
+World Map Angular Project for WGU
 
 By Ramsey Rimkeit
 Student ID: 011476142
