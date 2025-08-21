@@ -8,7 +8,32 @@
         </object>
     </div>
     <div class="column info-column">
-      <h2>Info Column</h2>
-      <p>This is the info column content. Country stats from API calls will go here.</p>
+      <h2>Country Information</h2>
+      <div *ngIf="selectedCountryInfo; else noSelection">
+        <h3 id="country-name">Country Name: {{selectedCountryInfo.name}}</h3>
+        
+        <!-- Show message if no data available -->
+        <div *ngIf="selectedCountryInfo?.capital === 'No data available'" class="no-data-message">
+          <p><em>Currently no country data available for {{selectedCountryInfo.name}}.</em></p>
+        </div>
+
+        <!-- Show loading state -->
+        <div *ngIf="selectedCountryInfo?.name === 'Loading...'" class="loading-message">
+          <p><em>Loading country data...</em></p>
+        </div>
+        
+        <!-- Show normal data if available -->
+        <div *ngIf="selectedCountryInfo?.capital !== 'No data available'">
+          <p><strong>Capital: </strong> <span id="country-capital">{{selectedCountryInfo.capital}}</span></p>
+          <p><strong>Region: </strong> <span id="country-region">{{selectedCountryInfo.region}}</span></p>
+          <p><strong>Income Level: </strong> <span id="income-level">{{selectedCountryInfo.incomeLevel}}</span></p>
+          <p><strong>Population: </strong> <span id="population">{{selectedCountryInfo.population}}</span></p>
+          <p><strong>Official Language(s)</strong>*<strong>: </strong><span id="languages">{{selectedCountryInfo.languages}}</span></p>
+          <p><br><sup>*Only the first 1-3 official languages displayed.</sup></p>
+        </div>
+      </div>
+      <ng-template #noSelection>
+        <p>Click on a country to see details.</p>
+      </ng-template>
     </div>
   </div>
