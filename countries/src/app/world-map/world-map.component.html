@@ -11,17 +11,14 @@
       <h2>Country Information</h2>
       <div *ngIf="selectedCountryInfo; else noSelection">
         <h3 id="country-name">Country Name: {{selectedCountryInfo.name}}</h3>
-        
-        <!-- Show message if no data available -->
+        <!-- Show no-data-message if no data available -->
         <div *ngIf="selectedCountryInfo?.capital === 'No data available'" class="no-data-message">
           <p><em>Currently no country data available for {{selectedCountryInfo.name}}.</em></p>
         </div>
-
         <!-- Show loading state -->
         <div *ngIf="selectedCountryInfo?.name === 'Loading...'" class="loading-message">
           <p><em>Loading country data...</em></p>
-        </div>
-        
+        </div>       
         <!-- Show normal data if available -->
         <div *ngIf="selectedCountryInfo?.capital !== 'No data available'">
           <p><strong>Capital: </strong> <span id="country-capital">{{selectedCountryInfo.capital}}</span></p>

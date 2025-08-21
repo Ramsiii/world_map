@@ -129,7 +129,6 @@ export class WorldMapComponent implements AfterViewInit {
     this.selectedCountryInfo = countryInfo;
   }
 
-
   private handleNoDataAvailable() {
     // Get country name from the clicked SVG element if available
     const countryName = this.selectedCountry?.getAttribute('name') || 'this country';
