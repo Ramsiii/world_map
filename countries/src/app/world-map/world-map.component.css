@@ -33,7 +33,15 @@
     height: auto;
     max-width: 800px;
   }
-
+  
+  .no-data-message {
+    color: #cecdcd;
+    font-style: italic;
+    padding: 10px;
+    background-color: #b763db;
+    border-radius: 4px;
+    margin: 10px 0;
+  }
 
   /* Responsive design for smaller screens, vertically stacked columns */
   /* TODO: change this based on final design? */
