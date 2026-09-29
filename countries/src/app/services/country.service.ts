@@ -24,10 +24,10 @@ export class CountryService {
     return this.http.get(url);
   }
 
-  // Method 2: RestCountries API for population and languages
-  getRestCountriesData(countryCode: string): Observable<any> {
-    // Add a proxy prefix to the broken API calls:
-    const proxyUrl = 'https://corsproxy.io/?';
-    const url = `${proxyUrl}${encodeURIComponent(`https://restcountries.com/v3.1/alpha/${countryCode}`)}`;
-  }
-}
+//   // Method 2: RestCountries API for population and languages
+//   getRestCountriesData(countryCode: string): Observable<any> {
+//     // Add a proxy prefix to the broken API calls:
+//     const proxyUrl = 'https://corsproxy.io/?';
+//     const url = `${proxyUrl}${encodeURIComponent(`https://restcountries.com/v3.1/alpha/${countryCode}`)}`;
+//   }
+// }
