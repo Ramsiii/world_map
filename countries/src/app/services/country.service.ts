@@ -28,7 +28,6 @@ export class CountryService {
   getRestCountriesData(countryCode: string): Observable<any> {
     // Add a proxy prefix to the broken API calls:
     const proxyUrl = 'https://corsproxy.io/?';
-    const url = `https://restcountries.com/v3.1/alpha/${countryCode}`;
-    return this.http.get(url);
+    const url = `${proxyUrl}${encodeURIComponent(`https://restcountries.com/v3.1/alpha/${countryCode}`)}`;
   }
 }
